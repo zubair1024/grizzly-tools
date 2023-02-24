@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 
 const route = routes.filter((i) => i.route === 'uuid-v4-generator')?.[0];
 
-const TextToNatoScreen = () => {
+const UuidV4GeneratorScreen = () => {
   const [numberOfIDs, setNumberOfIDs] = useState<number>(1);
   const [ids, setIds] = useState<string[]>([]);
 
@@ -94,4 +94,4 @@ const TextToNatoScreen = () => {
   );
 };
 
-export default TextToNatoScreen;
+export default UuidV4GeneratorScreen;
