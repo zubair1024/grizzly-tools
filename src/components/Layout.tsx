@@ -1,6 +1,6 @@
-import { motion } from "framer-motion";
-import Footer from "./Footer";
-import Header from "./Header";
+import { motion } from 'framer-motion';
+import Footer from './Footer';
+import Header from './Header';
 
 interface ILayoutProps {
   children: JSX.Element;
@@ -14,7 +14,7 @@ const Layout = (props: ILayoutProps) => {
         animate={{ x: 0, opacity: 1 }}
         exit={{ x: 300, opacity: 0 }}
         transition={{
-          type: "spring",
+          type: 'spring',
           stiffness: 260,
           damping: 20,
         }}
