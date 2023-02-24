@@ -67,7 +67,7 @@ const TextToNatoScreen = () => {
               </button>
             </div>
             <div className="flex flex-col items-center justify-center">
-              <ul>
+              <ul className="bg-gray-900 px-5 py-5 rounded-lg">
                 {ids.map((i) => (
                   <li key={i}>{i}</li>
                 ))}
