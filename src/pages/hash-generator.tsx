@@ -113,18 +113,15 @@ const HashGeneratorScreen = () => {
                       value={state[key as keyof HasherState].toString()}
                     ></input>
                   </div>
-                  <div className="tooltip tooltip-top" data-tip="Copied!">
-                    <button
-                      onClick={() =>
-                        copyTextToClip(
-                          state[key as keyof HasherState].toString(),
-                        )
-                      }
-                      className="btn btn-ghost"
-                    >
-                      Copy
-                    </button>
-                  </div>
+
+                  <button
+                    onClick={() =>
+                      copyTextToClip(state[key as keyof HasherState].toString())
+                    }
+                    className="btn btn-ghost"
+                  >
+                    Copy
+                  </button>
                 </div>
               ))}
             </div>
