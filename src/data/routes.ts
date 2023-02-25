@@ -26,6 +26,11 @@ export const routes: IRoute[] = [
     route: 'hash-generator',
     desc: `Generate a random Hashes for String inputs`,
   },
+  {
+    title: 'Simple Password',
+    route: 'simple-password-generator',
+    desc: `Generate a simple passwords that are easy to memorize`,
+  },
 ];
 
 export default routes;
