@@ -21,6 +21,11 @@ export const routes: IRoute[] = [
     route: 'random-port-generator',
     desc: `Generate a random TCP port number`,
   },
+  {
+    title: 'Hash Generators',
+    route: 'hash-generator',
+    desc: `Generate a random Hashes for String inputs`,
+  },
 ];
 
 export default routes;
