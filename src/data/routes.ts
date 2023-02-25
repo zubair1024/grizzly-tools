@@ -34,5 +34,11 @@ export const routes: IRoute[] = [
 ];
 
 export default routes.sort((a, b) => {
-  return Number(a.title) - Number(b.title);
+  if (a.title < b.title) {
+    return -1;
+  }
+  if (a.title > b.title) {
+    return 1;
+  }
+  return 0;
 });
