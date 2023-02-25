@@ -1,5 +1,6 @@
 import Layout from '@/components/Layout';
 import routes from '@/data/routes';
+import { copyTextToClip } from '@/utils';
 import crypto from 'crypto-js';
 import { useCallback, useEffect, useReducer, useState } from 'react';
 
@@ -113,7 +114,16 @@ const HashGeneratorScreen = () => {
                     ></input>
                   </div>
                   <div className="tooltip tooltip-top" data-tip="Copied!">
-                    <button className="btn btn-ghost">Copy</button>
+                    <button
+                      onClick={() =>
+                        copyTextToClip(
+                          state[key as keyof HasherState].toString(),
+                        )
+                      }
+                      className="btn btn-ghost"
+                    >
+                      Copy
+                    </button>
                   </div>
                 </div>
               ))}

@@ -1,5 +1,6 @@
 import Layout from '@/components/Layout';
 import routes from '@/data/routes';
+import { copyTextToClip } from '@/utils';
 import { useEffect, useState } from 'react';
 
 const route = routes.filter((i) => i.route === 'random-port-generator')?.[0];
@@ -16,7 +17,7 @@ const RandomPortGeneratorScreen = () => {
   }, []);
 
   const copyToClipBoard = () => {
-    navigator.clipboard.writeText(portNumber.toString());
+    copyTextToClip(portNumber.toString());
   };
 
   const handleRefresh = () => {
