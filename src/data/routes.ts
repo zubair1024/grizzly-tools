@@ -33,4 +33,6 @@ export const routes: IRoute[] = [
   },
 ];
 
-export default routes;
+export default routes.sort((a, b) => {
+  return Number(a.title) - Number(b.title);
+});
