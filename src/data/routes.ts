@@ -16,6 +16,11 @@ export const routes: IRoute[] = [
     route: 'text-to-slug',
     desc: `Slugifies strings, even when they contain Unicode, making strings URL-Safe`,
   },
+  {
+    title: 'Random Port Generator',
+    route: 'random-port-generator',
+    desc: `Generate a random TCP port number`,
+  },
 ];
 
 export default routes;
