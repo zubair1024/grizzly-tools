@@ -1,5 +1,6 @@
 import Layout from '@/components/Layout';
 import routes from '@/data/routes';
+import { copyTextToClip } from '@/utils';
 import axios from 'axios';
 import { useCallback, useEffect, useState } from 'react';
 
@@ -46,19 +47,30 @@ const RandomPortGeneratorScreen = () => {
               <p>Loading...</p>
             ) : (
               <>
-                <div className="grid grid-cols-2 text-center">
+                <div className="grid grid-cols-3 text-center items-center justify-center">
                   <p className="text-2xl">Simple</p>
                   <p className="text-2xl font-bold">{simplePassword}</p>
+                  <button
+                    className="btn btn-ghost"
+                    onClick={() => copyTextToClip(simplePassword)}
+                  >
+                    Copy
+                  </button>
                 </div>
-                <div className="grid grid-cols-2 text-center">
+                <div className="grid grid-cols-3 text-center">
                   <p className="text-2xl">Strong</p>
                   <p className="text-2xl font-bold">{strongPassword}</p>
+                  <button
+                    className="btn btn-ghost"
+                    onClick={() => copyTextToClip(strongPassword)}
+                  >
+                    Copy
+                  </button>
                 </div>
               </>
             )}
           </div>
           <div className="flex justify-between py-2">
-            <button className="btn btn-ghost">Copy</button>
             <button
               onClick={handleRefresh}
               className="btn btn-ghost text-accent"
