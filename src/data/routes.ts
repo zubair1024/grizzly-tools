@@ -36,6 +36,11 @@ export const routes: IRoute[] = [
     route: 'strong-password-generator',
     desc: `Generate a strong passwords that is quite random and secure`,
   },
+  {
+    title: 'My IP Address',
+    route: 'my-ip-address',
+    desc: `Find your public IP address and other details`,
+  },
 ];
 
 export default routes.sort((a, b) => {
