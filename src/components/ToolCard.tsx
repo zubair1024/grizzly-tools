@@ -11,7 +11,7 @@ const ToolCard = (props: IToolCardProps) => {
         <div className="card w-full h-full bg-base-100 shadow-xl">
           <div className="card-body">
             <h2 className="card-title">{props.route.title}</h2>
-            <p>{props.route.desc}</p>
+            <p className="text-sm font-light">{props.route.desc}</p>
             <div className="card-actions justify-end">
               <button className="btn btn-primary">Go</button>
             </div>

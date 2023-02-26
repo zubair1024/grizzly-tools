@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <>
       <Layout>
-        <div className="grid grid-cols-4 py-10 px-10 gap-2">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 py-10 px-10 gap-2">
           {routes.map((item) => (
             <ToolCard key={item.route} route={item} />
           ))}
