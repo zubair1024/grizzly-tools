@@ -5,7 +5,7 @@ import generator from 'generate-password-ts';
 import { useCallback, useEffect, useState } from 'react';
 
 const route = routes.filter(
-  (i) => i.route === 'simple-password-generator',
+  (i) => i.route === 'strong-password-generator',
 )?.[0];
 
 async function fetchPasswords(
