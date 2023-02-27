@@ -1,3 +1,4 @@
+import CustomHead from '@/components/CustomHead';
 import Layout from '@/components/Layout';
 import routes from '@/data/routes';
 import { copyTextToClip } from '@/utils';
@@ -57,7 +58,7 @@ const RandomPortGeneratorScreen = (props: {
       zipcode,
     });
     setIsLoading(false);
-  }, []);
+  }, [IP_GEO_API_KEY]);
 
   useEffect(() => {
     void generatePasswords();
@@ -69,6 +70,11 @@ const RandomPortGeneratorScreen = (props: {
 
   return (
     <>
+      <CustomHead
+        title="My IP Address Lookup"
+        description="A look up tool to find details of your IP address"
+        ogType={'article'}
+      />
       <Layout>
         <div className="max-w-xl min-h-screen mx-auto px-5 py-5">
           <div>

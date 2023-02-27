@@ -1,3 +1,4 @@
+import CustomHead from '@/components/CustomHead';
 import Layout from '@/components/Layout';
 import routes from '@/data/routes';
 import { useEffect, useState } from 'react';
@@ -35,6 +36,11 @@ const UuidV4GeneratorScreen = () => {
 
   return (
     <>
+      <CustomHead
+        ogType="article"
+        title={route.title}
+        description={route.desc}
+      />
       <Layout>
         <div className="max-w-xl min-h-screen mx-auto px-5 py-5">
           <div>
